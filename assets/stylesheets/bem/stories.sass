@@ -1,0 +1,177 @@
+.stories
+  width: 100%
+  height: 433px
+  background-color: #F8FBFD
+
+.stories__title
+  margin: 0
+  font-family: $fut
+  font-size: 24px
+  color: $black
+  letter-spacing: 1.04px
+  line-height: 31px
+  text-transform: uppercase
+  text-align: center
+  padding: 50px 0 37px
+
+.stories__strong
+  font-family: $extra
+  margin-left: 10px
+  position: relative
+  &:before
+    content: ''
+    display: block
+    height: 10px
+    background-image: url(img/underline.svg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 100% 10px
+    position: absolute
+    width: 100%
+    bottom: -7px
+    right: 0
+
+// .stories__wrapper
+//   width: 100%
+//   height: 100%
+
+.stories__container
+  width: 1231px
+  height: 254px
+  margin: 0 auto
+  background-image: url(img/cloud.png)
+  background-position: center
+  background-size: cover
+  display: flex
+  justify-content: center
+  align-items: center
+
+
+.stories__block
+  width: 363px
+  height: 170px
+
+.stories__story
+  font-family: $sfreg
+  font-size: 12px
+  color: #4E4E4E
+  line-height: 15px
+  margin: 0
+  padding-bottom: 8px
+
+.stories__text
+  height: 98px
+  border-bottom: 1px solid #E2E2E2
+  overflow: hidden
+  text-overflow: ellipsis
+
+.stories__bottom
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  padding-top: 8px
+
+.stories__left
+  flex: 0 1 auto
+  +clearfix
+
+.stories__photo
+  width: 60px
+  height: 60px
+  float: left
+
+.stories__info
+  float: left
+  transform: translateY(50%)
+  margin-left: 10px
+
+
+.stories__man
+  height: 100%
+  height: 100%
+
+.stories__name
+  font-family: $sfbold
+  font-size: 14px
+  line-height: 16px
+  color: #2B2B2B
+  letter-spacing: 0
+
+.stories__country
+  font-family: $sfsem
+  font-size: 10px
+  line-height: 12px
+  letter-spacing: 0
+  color: #7C7C7C
+  @extend .i-mark
+  &:before
+    margin-right: 3px
+    font-size: 9px
+    vertical-align: middle
+
+.stories__right
+  line-height: 10px
+  margin-top: -3px
+
+.stories__readmore
+  font-family: $sfbold
+  font-size: 10px
+  line-height: 12px
+  color: #4e4e4e
+  opacity: 0
+
+.owl-loaded
+  width: 785px
+  margin: 0 auto
+  // overflow: hidden
+
+.stories__carousel
+  position: relative
+  flex: 0 1 auto
+
+.owl-dots
+  position: absolute
+  width: 128px
+  height: 9px
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 0px auto 0
+  bottom: -55px
+  right: 50%
+  transform: translateX(50%)
+  .owl-dot
+    width: 9px
+    height: 100%
+    border-radius: 50%
+    margin: 0 4px
+    border: 1px solid #595959
+    &.active
+      background-color: #595959
+
+.owl-prev, .owl-next
+  height: 46px
+  color: #C4C4C4
+  transition: all .2s
+  &:hover
+    color: $black
+  @extend .i-carouselarrow
+
+.owl-nav
+  +clearfix
+  font-size: 42px
+  width: 100%
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+
+.owl-prev
+  margin-left: -50px
+  float: left
+  left: -50px
+
+.owl-next
+  margin-right: -50px
+  right: 0
+  float: right
+  transform: rotate(180deg)

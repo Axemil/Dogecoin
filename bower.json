@@ -1,8 +1,8 @@
 {
-  "name": "ProjectName",
-  "version": "0.0.0",
+  "name": "slavic_landing",
+  "version": "1.0.0",
   "authors": [
-    "author <mail@mail.com>"
+    "author <yaroslavfomink@gmail.com>"
   ],
   "license": "MIT",
   "ignore": [
