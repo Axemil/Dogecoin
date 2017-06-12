@@ -7,7 +7,6 @@ gulp = require('gulp')
 rigger = require('gulp-rigger')
 slim = require('gulp-slim')
 sass = require('gulp-sass')
-autoprefixer = require('gulp-autoprefixer')
 coffee = require('gulp-coffee')
 concat = require('gulp-concat')
 es = require('event-stream')
@@ -73,7 +72,6 @@ gulp.task 'html:build', ->
 gulp.task 'styles:build', ->
   return gulp.src path.src.styles
     .pipe sass().on('error', gutil.log)
-    .pipe autoprefixer()
     .pipe cssnano()
     .pipe rename (path)->
       if path.basename[0] == '@'
