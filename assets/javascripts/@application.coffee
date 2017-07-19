@@ -1,5 +1,0 @@
-(($)->
-
-  #= partials/hello.coffee
-
-)(jQuery)
