@@ -22,6 +22,7 @@ pngquant = require('imagemin-pngquant')
 rename = require('gulp-rename')
 fs = require('fs')
 realFavicon = require ('gulp-real-favicon')
+autoprefixer = require('gulp-autoprefixer')
 
 path =
   src:
@@ -72,6 +73,10 @@ gulp.task 'html:build', ->
 gulp.task 'styles:build', ->
   return gulp.src path.src.styles
     .pipe sass().on('error', gutil.log)
+    .pipe autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    })
     .pipe cssnano()
     .pipe rename (path)->
       if path.basename[0] == '@'
