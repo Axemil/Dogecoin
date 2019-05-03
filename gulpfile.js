@@ -4,7 +4,6 @@ var raw = 'assets/';
 var cooked = 'build/';
 var gulp = require('gulp');
 var rigger = require('gulp-rigger');
-var slim = require('gulp-slim');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var es = require('event-stream');
@@ -14,7 +13,6 @@ var cssnano = require('gulp-cssnano');
 var babel = require('gulp-babel');
 var livereload = require('gulp-livereload');
 var del = require('del');
-var iconfont = require('gulp-iconfont');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var rename = require('gulp-rename');
@@ -24,22 +22,18 @@ var autoprefixer = require('gulp-autoprefixer');
 
 var path = {
   src: {
-    slim: [raw + 'slim/*.slim', raw + 'slim/@*/*.slim'],
     html: [raw + 'html/*.html', raw + 'html/@*/*.html'],
     styles: [raw + 'stylesheets/@*.{scss,sass}', raw + 'stylesheets/**/@*.{scss,sass}'],
     js: raw + 'javascripts/**/@*.js',
     fonts: [raw + 'fonts/**/*.{eot,ttf,woff,woff2,svg}', '!' + raw + 'fonts/@*/*.svg'],
-    iconfont: raw + 'fonts/@*/*.{eot,ttf,woff,woff2,svg}',
     img: [raw + 'img/**/*.{jpg,png,gif,svg}', '!' + raw + 'img/favicon.{jpg,png,gif,svg}'],
     favicon: raw + 'img/favicon.svg'
   },
   watch: {
-    slim: raw + 'slim/**/*.slim',
     html: raw + 'html/**/*.html',
     styles: raw + 'stylesheets/**/*.{sass,scss,css}',
     js: raw + 'javascripts/**/*.js',
     fonts: raw + 'fonts/**/*.{eot,ttf,woff,woff2,svg}',
-    iconfont: raw + 'fonts/@*/*.{eot,ttf,woff,woff2,svg}',
     img: [raw + 'img/**/*.{jpg,png,gif,svg}', '!' + raw + 'img/favicon.{jpg,png,gif,svg}']
   },
   build: {
@@ -57,12 +51,6 @@ var path = {
   },
   clean: cooked
 };
-
-gulp.task('slim:build', function() {
-  return gulp.src(path.src.slim).pipe(rigger()).pipe(slim({
-    pretty: true
-  }).on('error', gutil.log)).pipe(gulp.dest(path.build.html)).pipe(livereload());
-});
 
 gulp.task('html:build', function() {
   return gulp.src(path.src.html).pipe(rigger()).pipe(gulp.dest(path.build.html)).pipe(livereload());
@@ -95,19 +83,7 @@ gulp.task('getIconfontName', function() {
   }));
 });
 
-gulp.task('iconfont:build', ['getIconfontName'], function() {
-  return gulp.src(path.src.iconfont).pipe(iconfont({
-    fontName: path.iconfontname,
-    prependUnicode: true,
-    normalize: true,
-    fontHeight: 1001,
-    formats: ['ttf', 'eot', 'woff', 'woff2', 'svg']
-  })).on('glyphs', function(glyphs) {
-    return console.log(glyphs);
-  }).pipe(gulp.dest(path.build.fonts + '/' + path.iconfontname)).pipe(livereload());
-});
-
-gulp.task('fonts:build', ['iconfont:build'], function() {
+gulp.task('fonts:build', function() {
   return gulp.src(path.src.fonts).pipe(gulp.dest(path.build.fonts)).pipe(livereload());
 });
 
@@ -132,7 +108,6 @@ gulp.task('lr:listen', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(path.watch.slim, ['slim:build']);
   gulp.watch(path.watch.html, ['html:build']);
   gulp.watch(path.watch.styles, ['styles:build']);
   gulp.watch(path.watch.js, ['js:build']);
@@ -140,7 +115,7 @@ gulp.task('watch', function() {
   return gulp.watch(path.watch.img, ['img:build']);
 });
 
-gulp.task('build', ['slim:build', 'html:build', 'styles:build', 'js:build', 'fonts:build', 'img:build']);
+gulp.task('build', ['html:build', 'styles:build', 'js:build', 'fonts:build', 'img:build']);
 
 gulp.task('refresh', ['clean', 'build']);
 

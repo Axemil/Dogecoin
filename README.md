@@ -39,7 +39,6 @@ Enjoy!
 
 All build commands:
 
-      gulp slim:build
       gulp html:build
       gulp styles:build
       gulp js:build
