@@ -14,7 +14,6 @@ Install global dependencies:
 
 Install packages:
 
-      bower install
       npm install
 
 
@@ -38,11 +37,9 @@ Enjoy!
 ## COMMANDS
 
 All build commands:
-
       gulp html:build
       gulp styles:build
       gulp js:build
-      gulp coffee:build
       gulp fonts:build
       gulp img:build
 
