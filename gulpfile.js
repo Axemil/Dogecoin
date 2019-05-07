@@ -69,7 +69,7 @@ gulp.task('styles:build', function() {
 
 gulp.task('js:build', function() {
   return gulp.src(path.src.js).pipe(rigger()).pipe(babel({
-    presets: ['es2017']
+    presets: ['env']
   })).pipe(uglify()).pipe(rename(function(path) {
     if (path.basename[0] === '@') {
       return path.basename = path.basename.slice(1);
