@@ -8,10 +8,6 @@ Clone repository to your local machine
 
       git clone git@git.dowell.com.ua:shared/gulp-template.git
 
-Install global dependencies:
-
-      npm install -g gulp bower
-
 Install packages:
 
       npm install
