@@ -1,0 +1,1007 @@
+.rocket_section{
+    background-image: url(img/bg_night.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 1300px;
+    overflow: hidden;
+    @media (min-width: 767px){
+        background-position: center;
+        background-image: url(https://www.dogetop5.com/wp-content/uploads/2020/12/bg_night_desktop.png);
+    }
+    .rocket_dogo_star{
+        max-width: 400px;
+        margin: 0 auto;
+        position: relative;
+        transition: .8s ease-in-out;
+        transform: translateY(0) scale(1);
+        @media (min-width: 1040px){
+            max-width: 650px;
+        }
+        .light_point{
+            width: 0;
+            height: 0;
+            background-color:  rgba(199, 140, 9, 0.1);
+            position: absolute;
+            border-radius: 50%;
+        }
+        @keyframes light {
+            from {
+              box-shadow: 0 0 10px 5px rgba(199, 140, 9, 1);
+            }
+            to {
+              box-shadow: 0 0 20px 10px rgba(199, 140, 9, 1);
+            }
+        }
+        @media (min-width: 767px) {
+            @keyframes light {
+                from {
+                  box-shadow: 0 0 10px 5px rgba(199, 140, 9, 1);
+                }
+                to {
+                  box-shadow: 0 0 40px 20px rgba(199, 140, 9, 1);
+                }
+            }
+        }
+        .light_point_1{
+            left: 20%;
+            top: 30%;
+            animation: light 1.7s infinite alternate;
+        }
+        .light_point_2{
+            left: 78%;
+            top: 70%;
+            animation: light 1.7s infinite alternate;
+        }
+        .light_point_3{
+            left: 13%;
+            top: 44%;
+            animation: light 1.8s infinite alternate;
+        }
+        .light_point_4{
+            left: 85%;
+            top: 56%;
+            animation: light 1.8s infinite alternate;
+        }
+        .light_point_5{
+            left: 14%;
+            top: 59%;
+            animation: light 1.9s infinite alternate;
+        }
+        .light_point_6{
+            left: 84%;
+            top: 42%;
+            animation: light 1.9s infinite alternate;
+        }
+        .light_point_7{
+            left: 20%;
+            top: 73%;
+            animation: light 2s infinite alternate;
+        }
+        .light_point_8{
+            left: 77%;
+            top: 28%;
+            animation: light 2s infinite alternate;
+        }
+    }
+    .rocket_dogo_star_active{
+        transform: translateY(-400px) scale(0.6);
+    }
+    .lil_stars{
+        position: absolute;
+        width: 36px;
+    }
+    .lil_star_1{
+        left: 90px;
+        top: 110px;
+    }
+    .lil_star_2{
+        left: 85px;
+        top: 160px;
+    }
+    .lil_star_3{
+        left: 290px;
+        top: 150px;
+    }
+    .lil_star_4{
+        left: 275px;
+        top: 100px;
+    }
+    .hashtag_dogo{
+        margin-top: -35px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 24px;
+        text-align: right;
+        background: linear-gradient(180deg, #FFF4B9 0%, #FEE29B 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        text-shadow: 0px 0px 2px rgba(255, 234, 179, 0.9), 0px 0px 10px rgba(255, 255, 255, 0.56), 0px 0px 16px rgba(255, 251, 213, 0.53);
+    }
+    .dogo_rocket{
+        position: relative;
+        transition: .01s ease-in-out;
+        max-width: 400px;
+        margin: 30px auto 0;
+        // animation: flyIn 0.3s forwards ease-in-out ,rocket 0.2s ease-in-out infinite alternate-reverse;
+
+        @media (min-width: 767px) {
+            max-width: 700px;
+            margin: 30px auto -200px;
+        }
+        @media (min-width: 1040px) {
+            max-width: 1040px;
+        }
+        & img{
+            max-width: 150px;
+            @media (min-width: 767px) {
+                transform: translate(0px, 0px);
+                max-width: 265px;
+            }
+            @media (min-width: 1040px) {
+                transform: translate(-60px, 60px);
+                max-width: 265px;
+            }
+        }
+    }
+    .dogo_rocket_active{
+        animation: flyOut 0.6s ease-in-out forwards;
+    }
+    @keyframes flyIn {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    @keyframes flyOut {
+        0%{
+            opacity: 1;
+            transform: translate(0,0);
+        }
+        100%{
+            opacity: 0;
+            transform: translate(100px, -100px);
+        }
+    }
+    @keyframes rocket {
+        0% {
+          transform: translate(0,0);
+        }
+        100% {
+            transform: translate(2px,2px);
+        }
+    }
+
+    .rocket_prophecy{
+        background-image: url(img/bg_prophecy.png);
+        min-height: 500px;
+        max-width: 400px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        z-index: 3;
+        position: relative;
+        @media (min-width: 767px) {
+            max-width: 650px;
+            min-height: 680px;
+            background-image: url(https://www.dogetop5.com/wp-content/uploads/2020/12/bg_prophecy_desktop.png);
+        }
+        & h5{
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: 0em;
+            text-align: center;
+            padding: 60px 0 20px 0;
+            @media (min-width: 767px) {
+                padding: 110px 0 20px 0;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 48px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+        }
+
+        & p{
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: center;
+            margin: 0 60px;
+            @media (min-width: 767px) {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px;
+                letter-spacing: 0em;
+                text-align: center;
+                margin: 0 135px;
+            }
+        }
+        @media (max-width: 375px) {
+            & h5{
+                font-size: 22px;
+                line-height: 36px;
+                padding: 60px 0 5px;
+            }
+            & p{
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+        @media (max-width: 350px) {
+            & h5{
+                font-size: 20px;
+                line-height: 30px;
+                padding: 60px 0 5px;
+            }
+            & p{
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+    }
+    .rocket_info-text{
+        padding: 40px 40px 160px;
+        color: #fff;
+        z-index: 5;
+        max-width: 1040px;
+        margin: 0 auto;
+        position: relative;
+        @media (min-width: 767px) {
+            padding: 100px 20px 160px;
+        }
+        @media (min-width: 1040px){
+            padding: 110px 0 160px;
+        }
+        & h5{
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 36px;
+            letter-spacing: 0em;
+            @media (min-width: 767px) {
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 48px;
+                letter-spacing: 0em;
+            }
+        }
+        & p{
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: justify;
+            padding: 20px 0 0 0;
+            @media (min-width: 767px) {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px;
+                letter-spacing: 0em;
+                text-align: justified;
+            }
+        }
+    }
+    .rocket_block-lamps{
+        position: relative;
+        z-index: 1;
+        max-width: 400px;
+        margin: 0 auto;
+        .rocket_lamp{
+            position: absolute;
+            animation: flyIn 0.3s ease-in-out forwards;
+        }
+        .rocket_lamp-1 {
+            width: 120px;
+            left: -50px;
+            top: -500px;
+        }
+        .rocket_lamp-2 {
+            width: 220px;
+            left: -50px;
+            top: -200px;
+        }
+        .rocket_lamp-3 {
+            width: 120px;
+            left: 103px;
+            top: -190px;
+        }
+        .rocket_lamp-4 {
+            width: 120px;
+            left: 307px;
+            top: -160px;
+        }
+        .rocket_lamp-5 {
+            width: 120px;
+            left: 337px;
+            top: -420px;
+        }
+        @media (min-width: 1040px) {
+            .rocket_lamp-1 {
+                width: 290px;
+                left: -500px;
+                top: -800px;
+            }
+            .rocket_lamp-2 {
+                width: 330px;
+                left: -450px;
+                top: -200px;
+            }
+            .rocket_lamp-3 {
+                width: 180px;
+                left: -100px;
+                top: -190px;
+            }
+            .rocket_lamp-4 {
+                width: 235px;
+                left: 607px;
+                top: -150px;
+            }
+            .rocket_lamp-5 {
+                width: 300px;
+                left: 650px;
+                top: -620px;
+            }
+        }
+        @media (max-width: 375px){
+            .rocket_lamp-1{
+                left: 0px;
+            }
+            .rocket_lamp-4{
+                left: 285px;
+            }
+            .rocket_lamp-5{
+                left: 270px;
+            }
+        }
+        .rocket_lamp-1_active{
+            animation: 0.7s rocket_lamp1_fly forwards ease-in-out;
+        }
+        .rocket_lamp-2_active{
+            animation: 1s rocket_lamp2_fly forwards ease-in-out;
+        }
+        .rocket_lamp-3_active{
+            animation: 0.9s rocket_lamp3_fly forwards ease-in-out;
+        }
+        .rocket_lamp-4_active{
+            animation: 1.2s rocket_lamp4_fly forwards ease-in-out;
+        }
+        .rocket_lamp-5_active{
+            animation: 0.5s rocket_lamp5_fly forwards ease-in-out;
+        }
+        @keyframes rocket_lamp1_fly {
+            0%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100%{
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+        }
+        @keyframes rocket_lamp2_fly {
+            0%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100%{
+                opacity: 0;
+                transform: translateY(-60px);
+            }
+        }
+        @keyframes rocket_lamp3_fly {
+            0%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100%{
+                opacity: 0;
+                transform: translateY(-120px);
+            }
+        }
+        @keyframes rocket_lamp4_fly {
+            0%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100%{
+                opacity: 0;
+                transform: translateY(-160px);
+            }
+        }
+        @keyframes rocket_lamp5_fly {
+            0%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100%{
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+        }
+        .rocket_lamp-2_active{
+
+        }
+        .rocket_lamp-3_active{
+
+        }
+        .rocket_lamp-4_active{
+
+        }
+        .rocket_lamp-5_active{
+
+        }
+    }
+}
+
+.chart_section{
+    padding: 45px 0;
+    background: #fff;
+    @media (min-width: 767px) {
+        padding: 50px 0 55px;
+    }
+    .chart_graph{
+        max-width: 414px;
+        margin: 0 auto 5px;
+        position: relative;
+        @media (min-width: 767px) {
+            max-width: 767px;
+        }
+        @media (min-width: 1040px) {
+            max-width: 1040px;
+        }
+    }
+    .chart_graph_image{
+        width: 71px;
+        position: absolute;
+        right: 9%;
+        top: -20px;
+        animation: rocket 0.2s ease-in-out infinite alternate-reverse;
+        @media (min-width: 767px) {
+            width: 120px;
+            right: 10%;
+        }
+        @media (min-width: 1040px) {
+            width: 180px;
+            top: -30px;
+            right: 9%;
+        }
+    }
+    .chart_text{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: justified;
+        padding: 0 40px;
+        max-width: 1040px;
+        margin: 0 auto;
+        @media (min-width: 767px) {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0em;
+            text-align: justified;
+            padding: 0 20px;
+        }
+        @media (min-width: 1040px) {
+            padding: 0;
+        }
+    }
+}
+
+.letter_block{
+    background-image: url(img/bg_letter.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 790px;
+    padding: 0 20px 0;
+    @media (min-width: 767px) {
+        height: 910px;
+        background-image: url(https://www.dogetop5.com/wp-content/uploads/2020/12/BG-Small-Desktop-2.png);
+    }
+    .letter_dream_image{
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 26px 0 23px;
+        & img{
+            max-width: 230px;
+            @media (min-width: 767px) {
+                max-width: 325px;
+            }
+        }
+    }
+    .letter_dream_dogo{
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+
+        @media (min-width: 767px){
+            max-width: 350px;
+        }
+
+        .shadow-point {
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            position: absolute;
+            border-radius: 50%;
+            animation: shadow 1s infinite alternate;
+        }
+        .shadow-point_1{
+            left: 116px;
+            top: 64px;
+            @media (min-width: 767px) {
+                left: 136px;
+                top: 74px;
+            }
+        }
+        .shadow-point_2{
+            left: 187px;
+            top: 64px;
+            @media (min-width: 767px) {
+                left: 219px;
+                top: 74px;
+            }
+        }
+          
+        @keyframes shadow {
+            from {
+              box-shadow: 0 0 10px 5px white;
+            }
+            to {
+              box-shadow: 0 0 20px 10px white;
+            }
+        }
+    }
+    .dogo_hands{
+        position: relative;
+        z-index: 10;
+    }
+    .letter_page{
+        margin: 0 auto;
+        background: #fff;
+        position: relative;
+        bottom: 110px;
+        z-index: 1;
+        padding: 20px;
+        max-width: 512px;
+        @media (min-width: 767px) {
+            bottom: 120px;
+            min-height: 320px;
+            margin: 0 auto 55px;
+        }
+    }
+    .letter_dream_hands{
+        width: 280px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        top: 370px;
+        @media (min-width: 767px) {
+            width: 320px;
+            top: 480px;
+        }
+    }
+    .letter_text{
+        font-family: Indie Flower;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+    .letter_page img{
+        width: 73px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+.crypto_section{
+    position: relative;
+    padding: 33px 40px 52px;
+    @media (min-width: 1040px){
+        padding: 100px 40px 64px;
+    }
+    & h3{
+        position: relative;
+        z-index: 2;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding: 0 0 20px 0;
+        max-width: 1040px;
+        margin: 0 auto;
+        @media (min-width: 767px) {
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: left;
+            & br{
+                display: none;
+            }
+            padding: 0 0 20px;
+        }
+    }
+    & p{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: justified;
+        padding: 0 0 20px 0;
+        max-width: 1040px;
+        margin: 0 auto;
+        @media (min-width: 767px) {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0em;
+            text-align: justified;
+            padding: 0 0 56px;
+        }
+    }
+    .coins_block{
+        position: relative;
+        margin: 0 auto;
+        z-index: 1;
+        max-width: 320px;
+        width: 100%;
+    }
+    .coins_block img{
+        width: 36px;
+        position: absolute;
+    }
+    .coin_1{
+        left: 10px;
+    }
+    .coin_2{
+        left: 70px;
+    }
+    .coin_3{
+        left: 160px;
+    }
+    .coin_4{
+        left: 240px;
+    }
+    .coin_5{
+        left: 280px;
+    }
+    @media (max-width: 375px){
+        .coin_3{
+            left: 100px;
+        }
+        .coin_4{
+            left: 170px;
+        }
+        .coin_5{
+            left: 200px;
+        }
+    }
+    .coin_1_active{
+        animation: 0.8s coin_1_reveal forwards ease-in-out;
+    }
+    .coin_2_active{
+        animation: 1.2s coin_2_reveal forwards ease-in-out;
+    }
+    .coin_3_active{
+        animation: 1s coin_3_reveal forwards ease-in-out;
+    }
+    .coin_4_active{
+        animation: 0.5s coin_4_reveal forwards ease-in-out;
+    }
+    .coin_5_active{
+        animation: 0.9s coin_5_reveal forwards ease-in-out;
+    }
+    @keyframes coin_1_reveal {
+        0%{
+            top: 0;
+            opacity: 1;
+        }
+        100%{
+            top: -100px;
+            opacity: 0;
+        }
+    }
+    @keyframes coin_2_reveal {
+        0%{
+            top: 0;
+            opacity: 1;
+        }
+        100%{
+            top: -80px;
+            opacity: 0;
+        }
+    }
+    @keyframes coin_3_reveal {
+        0%{
+            top: 0;
+            opacity: 1;
+        }
+        100%{
+            top: -80px;
+            opacity: 0;
+        }
+    }
+    @keyframes coin_4_reveal {
+        0%{
+            top: 0;
+            opacity: 1;
+        }
+        100%{
+            top: -160px;
+            opacity: 0;
+        }
+    }
+    @keyframes coin_5_reveal {
+        0%{
+            top: 0;
+            opacity: 1;
+        }
+        100%{
+            top: -130px;
+            opacity: 0;
+        }
+    }
+    & button{
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 320px;
+        width: 100%;
+        padding: 8px 0;
+        margin: 0 auto;
+        min-height: 50px;
+        background: linear-gradient(94.34deg, #D79F10 11.01%, #CE9708 38.63%, #F6C23A 80.9%);
+        box-shadow: 0px 4px 8px rgba(32, 35, 40, 0.33);
+        outline: none;
+        border: none;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0em;
+        color: #fff;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        & img{
+            width: 32px;
+            margin: 0 12px 0 0;
+        }
+    }
+    @media (max-width: 375px){
+        & button{
+            font-size: 14px;
+        }
+    }
+    .crypto_btn_active{
+        color: #816E34;
+        background: #DFAF33;
+        box-shadow: inset 0px 8px 16px rgba(199, 140, 9, 0.38);
+        & img{
+            display: none;
+        }
+    }
+    .crypto_image{
+        position: absolute;
+        max-width: 360px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -30px;
+        @media (min-width: 767px){
+            display: none;
+        }
+        @media (max-width: 375px){
+            position: absolute;
+            max-width: 200px;
+            left: 65%;
+            transform: translateX(-50%);
+            top: 20px;
+        }
+    }
+    .crypto_image_desktop{
+        position: absolute;
+        max-width: 1140px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -90px;
+        z-index: 1;
+        @media (max-width: 767px){
+            display: none;
+        }
+    }
+    .cryprto_list{
+        max-width: 320px;
+        margin: 32px auto 0;
+        overflow: hidden;
+        transition: .7s ease-in-out;
+        height: 0;
+        & a{
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #fff;
+            background: #4673FF;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            display: block;
+            text-align: center;
+        }
+        .cryprto_list_section{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            & a{
+                width: 95px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+    .cryprto_list_active{
+        animation: 0.7s crypto_reveal forwards ease-in-out;
+    }
+    @keyframes crypto_reveal {
+        0%{
+            height: 0;
+        }
+        100%{
+            height: 250px;
+        }
+    }
+}
+.support_section{
+    background: #EFF3FE;
+    padding: 35px 40px 100px;
+    @media (min-width: 1040px){
+        padding: 53px 40px 80px;
+    }
+    & h3{
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding: 0 0 20px;
+        max-width: 1040px;
+        margin: 0 auto;
+        @media (min-width: 767px) {
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+    & p{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: justified;
+        padding: 0 0 25px;
+        max-width: 1040px;
+        margin: 0 auto;
+        @media (min-width: 767px) {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0em;
+            text-align: justified;
+        }
+    }
+    & a{
+        display: block;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #4673FF;
+        max-width: 1040px;
+        margin: 0 auto;
+        @media (min-width: 767px) {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0em;
+            text-align: justified;
+        }
+    }
+}
+
+.bounty_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 320px;
+    width: 100%;
+    padding: 8px 0;
+    margin: 8px auto 54px;
+    background: linear-gradient(94.34deg, #D79F10 11.01%, #CE9708 38.63%, #F6C23A 80.9%);
+    box-shadow: 0px 4px 8px rgba(32, 35, 40, 0.33);
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    & img{
+        width: 32px;
+        margin: 0 12px 0 0;
+    }
+}
+
+@media (max-width: 375px){
+    .bounty_btn{
+        font-size: 14px;
+    }
+}
+
+.bounty_btn_global{
+    margin: 0 auto;
+}
+
+.bounty_campain{
+    position: fixed;
+    bottom: -50px;
+    max-width: 320px;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 20;
+    transition: 0.3s ease-in-out;
+    @media (min-width: 767px) {
+        display: none;
+    }
+}
+
+.bounty_campain_active{
+    bottom: 20px;
+}

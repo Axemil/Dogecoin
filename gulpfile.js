@@ -88,15 +88,7 @@ gulp.task('fonts:build', function() {
 });
 
 gulp.task('img:build', function() {
-  return gulp.src(path.src.img).pipe(imagemin({
-    progressive: true,
-    svgoPlugins: [
-      {
-        removeViewBox: false
-      }
-    ],
-    use: [pngquant()]
-  })).pipe(gulp.dest(path.build.img)).pipe(livereload());
+  return gulp.src(path.src.img).pipe(gulp.dest(path.build.img)).pipe(livereload());
 });
 
 gulp.task('clean', function() {
